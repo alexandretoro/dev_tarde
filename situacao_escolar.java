@@ -47,8 +47,13 @@ void main() {
     else {
         conceito = 'E';
     }
-    println("A nota 1 é = " + String.format("%.2f", n1) + " || A nota 2 é = " + String.format("%.2f", n2) + " || A nota 3 é = " + String.format("%.2f", n3) + " || A nota  é = " + String.format("%.2f", n4));
-    println("A média final é: " + mf);
+    if (conceito == 'A' || conceito == 'B' || conceito == 'C')
+        mensagem = "aprovado";
+    else
+        mensagem = "reprovado";
+
+    println("A primeira nota é = " + String.format("%.2f", n1) + " || A segunda nota é = " + String.format("%.2f", n2) + " || A terceira nota é = " + String.format("%.2f", n3) + " || A quarta nota é = " + String.format("%.2f", n4));
+    println("A média final é: " + mf + " e você está " + mensagem);
 
 
 }
